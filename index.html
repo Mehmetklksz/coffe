@@ -1309,14 +1309,12 @@
         header.addEventListener("click", () => {
           const currentCard = header.closest(".support-card");
 
-          // Diğer açık olan akordeonlar otomatik kapansın istersen bu blok kalabilir:
           document.querySelectorAll(".support-card").forEach((card) => {
             if (card !== currentCard) {
               card.classList.remove("active");
             }
           });
 
-          // Tıklanan kartı aç/kapat
           currentCard.classList.toggle("active");
         });
       });
